@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-devuce-width, initial-scale=1.0">
+        <title>Universal Video Downloader</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <!main app container that holds everything->
+        <div class="app-container">
+
+            <!header section with logo and tagline>
+            <header class="app-header">
+
+                <!download icoon as part of logo>
+                <div class="logo-container">
+
+                    <!app name with gradient text.>
+                    <i class="fas fa-download logo-icon"></i>
+                    <h1 class="logo-text">VibGrabber</h1>
+                </div>
+
+                <!Descriptive tagl;oine_>
+                <p class="tagline">Download videos from Youtube,Tiktok,Instagram,Facebook,and more</p>
+            </header>
+
+            <!Main content area>
+            <main class="main-content">
+
+                <!URL input section..>
+                <div class="url-input-container">
+                    <div class="input-group">
+
+                        <!input field for video-url>
+                        <input type="text" id="video-url"
+                        placeholder="Paste video URL here.." class="url-input">
+
+                        <!button to trigger analysis>
+                        <button id="analyze-btn" class="analyze-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <! Supported platform section_>
+                    <div class="supported-platforms">
+                        <p>Supported platforms:</p>
+
+                        <! Platform icons using Font Awesome>
+                        <div class="platform-icons">
+                            <i class="fab fa-youtube" title="Youtube"></i>
+                            <i class="fab fa-instagram" title="Instagram"></i>
+                            <i class="fab fa-facebook" title="Facebook"></i>
+                            <i class="fab fa-tiktok" title="Tiktok"></i>
+                            <i class="fab fa-twitter" title="Twitter"></i>
+                            <i class="fab fa-linkedin" title="Linkedin"></i>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <! Loading indicator (hidden by default)>
+                <div id="loading-indicator" class="loading-container hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing Video link...</p>
+                </div>
+
+                <! Video Information container(hidden by default)>
+                <div id="video-info" class="video-info-container hidden">
+                    <div class="video-thumbnail">
+                        <! Thumbnail image(source will set by java script)>
+                        <img id="video-thumb" src="" alt="Video-thumbnail">
+                    </div>
+
+                    <div class="video-details">
+                        <!These element populated by javascript>
+                        <h3 id="video-title"></h3>
+                        <p id="video-duration"></p>
+                        <p id="video-platform"></p>
+                    </div>
+                </div>
+
+
+                <!Download options container(hidden by default)>
+                <div id="download-options" class="download-options hidden">
+                    <h3>Download Options</h3>
+                    <!Grid for download options will be populated by javascript>
+                    <div class="options-grid" id="options-grid"></div>
+                </div>
+
+
+                <!Error message container (hidden by default)>
+                <div id="error-message" class="error-container hidden">
+                    <i class="fas fa-exclamination-circle error-icon"></i>
+                    <p id="error-text"></p>
+                </div>    
+            </main>
+
+
+            <footer class="app-footer">
+                <p>© 2025 VidGrabber</p>
+                <p class="diclamer">Use this serives om compliance with platform terms of servise and copyright laws.</p>
+
+            </footer>
+            
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
